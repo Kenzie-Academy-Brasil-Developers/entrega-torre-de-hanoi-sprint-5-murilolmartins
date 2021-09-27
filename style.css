@@ -1,0 +1,76 @@
+.container {
+    width: 100%;
+    height: 100%;
+}
+.tabuleiro {
+    width: 100%;
+    height: 65%;
+    background-color: aliceblue;
+    display: flex;
+    
+}
+.divisor {
+    width: 100%;
+    height: 5%;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.footer {
+    width: 100%;
+    height: 30%;
+    background-color: darkblue;
+}
+.espetos {
+    width: 33.333%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+
+}
+.espeto {
+    background-color: green;
+    width: 30px;
+    height: 80%;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+.discos {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+    position: absolute;
+}
+.disco {
+    height: 25%;
+    border-radius: 5px;
+
+}
+.um {
+    width: 300px;
+    background-color: black;
+
+}
+.dois {
+    width: 260px;
+    background-color: brown;
+}
+
+.tres {
+    width: 220px;
+    background-color: burlywood;
+}
+.quatro {
+    width: 180px;
+    background-color: grey;
+}
+.letra {
+    font-size: 50px;
+    cursor: pointer;
+}
