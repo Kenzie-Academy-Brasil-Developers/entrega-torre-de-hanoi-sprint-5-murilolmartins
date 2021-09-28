@@ -10,15 +10,13 @@
 </head>
 <body>
     <div class="container">
+        <button value="3">3 discos</button>
+        <button value="4">4 discos</button>
+        <button value="5">5 discos</button>
         <div class="tabuleiro">
             <div class="espetos">
                 <div class="espeto"></div>
-                <div class="discos">
-                    <div class="disco um"></div>
-                    <div class="disco dois"></div>
-                    <div class="disco tres"></div>
-                    <div class="disco quatro"></div>
-                </div>
+                <div class="discos start"></div>
             </div>
             <div class="espetos">
                 <div class="espeto"></div>
@@ -26,7 +24,7 @@
             </div>
             <div class="espetos">
                 <div class="espeto"></div>
-                <div class="discos"></div>
+                <div class="discos end"></div>
             </div>
         </div>
         <div class="divisor">
@@ -34,8 +32,12 @@
             <p class="letra">B</p>
             <p class="letra">C</p>
         </div>
-        <div class="footer"></div>
+        <div class="footer">
+            <p class="aviso"></p>
+            <button class="reset">RESET</button>
+            <p class="footer__p">Contador Jogadas<span class="contador"></span></p>
+        </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="arquivo.js"></script>
 </body>
 </html>

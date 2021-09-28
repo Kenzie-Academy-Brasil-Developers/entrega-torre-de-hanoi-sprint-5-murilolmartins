@@ -20,7 +20,11 @@
 .footer {
     width: 100%;
     height: 30%;
+    display: flex;
     background-color: darkblue;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 .espetos {
     width: 33.333%;
@@ -44,33 +48,50 @@
     flex-direction: column-reverse;
     align-items: center;
     width: 100%;
-    height: 20%;
     position: absolute;
 }
 .disco {
-    height: 25%;
+    height: 20px;
     border-radius: 5px;
 
 }
-.um {
+.disco0 {
     width: 300px;
     background-color: black;
 
 }
-.dois {
+.disco1 {
     width: 260px;
     background-color: brown;
 }
 
-.tres {
+.disco2 {
     width: 220px;
     background-color: burlywood;
 }
-.quatro {
+.disco3 {
     width: 180px;
     background-color: grey;
+}
+.disco4 {
+    width: 140px;
+    background-color: magenta;
 }
 .letra {
     font-size: 50px;
     cursor: pointer;
+}
+#selecionado {
+    border: 5px solid greenyellow;
+}
+button {
+    cursor: pointer;
+    width: 110px;
+    height: 50px;
+    font-size: 24px;
+    background-color: deepskyblue;
+}
+.contador {
+    font-size: 45px;
+    color: aliceblue;
 }
