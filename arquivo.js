@@ -1,3 +1,4 @@
+
 const espetos = document.querySelectorAll(".espetos");
 const reset = document.querySelector(".reset");
 let contagem = document.querySelector(".contador");
