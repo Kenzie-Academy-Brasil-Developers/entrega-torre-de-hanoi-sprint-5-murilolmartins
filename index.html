@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style26.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -13,18 +13,15 @@
         <div class="tabuleiro">
             <div class="espetos">
                 <div class="espeto"></div>
-                <div class="discos">
-                    <div class="disco  um"></div>
-                    <div class="disco dois"></div>
-                    <div class="disco tres"></div>
-                    <div class="disco quatro"></div>
-                </div>
+                <div class="discos start"></div>
             </div>
             <div class="espetos">
                 <div class="espeto"></div>
+                <div class="discos"></div>
             </div>
             <div class="espetos">
                 <div class="espeto"></div>
+                <div class="discos end"></div>
             </div>
         </div>
         <div class="divisor">
@@ -32,7 +29,11 @@
             <p class="letra">B</p>
             <p class="letra">C</p>
         </div>
-        <div class="footer"></div>
+        <div class="footer">
+            <button class="reset">RESET</button>
+            <span class="contador"></span>
+        </div>
     </div>
+    <script src="arquivo.js"></script>
 </body>
 </html>
