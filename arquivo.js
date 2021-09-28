@@ -58,7 +58,6 @@ function criandojogo() {
     let disco = document.createElement("div");
     disco.classList.add(`disco${i}`);
     disco.classList.add(`disco`);
-  console.log("oi")
     start.appendChild(disco);
   }
   contador = 0;
