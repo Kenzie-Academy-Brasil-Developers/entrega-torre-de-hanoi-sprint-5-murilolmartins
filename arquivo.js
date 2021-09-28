@@ -20,11 +20,11 @@ botao.forEach((button) => {
 });
 
 function selecionando(event) {
-  if (variavel === 0) {
+  if (variavel === 0 && event.currentTarget.lastElementChild.childElementCount >= 1) {
     discoescolhido = event.currentTarget.lastElementChild.lastElementChild;
     discoescolhido.id = "selecionado";
     variavel = 1;
-  } else {
+  } else if (variavel === 1) {
     let espetoescolhido = event.currentTarget.lastElementChild;
     if (
       espetoescolhido.childElementCount === 0 ||
