@@ -2,7 +2,7 @@
 const espetos = document.querySelectorAll(".espetos");
 const reset = document.querySelector(".reset");
 let contagem = document.querySelector(".contador");
-let botao = document.querySelectorAll("button");
+let botao = document.querySelectorAll(".dificuldade");
 let aviso = document.querySelector(".aviso");
 let variavel = 0;
 let contador = 0;
@@ -19,6 +19,7 @@ botao.forEach((button) => {
     criandojogo();
   });
 });
+reset.addEventListener("click",criandojogo);
 
 function selecionando(event) {
   if (variavel === 0 && event.currentTarget.lastElementChild.childElementCount >= 1) {
@@ -53,8 +54,7 @@ function criandojogo() {
   discos.forEach((discos) => {
     discos.innerHTML = "";
   });
-  let start = document.querySelector(".discos");
-  start.classList.add("start");
+  let start = document.querySelector(".start");
   for (let i = 0; i < dificuldade; i++) {
     let disco = document.createElement("div");
     disco.classList.add(`disco${i}`);
@@ -77,4 +77,3 @@ function vitoria() {
 }
 criandojogo();
 
-reset.addEventListener("click", criandojogo);
