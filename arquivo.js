@@ -21,7 +21,10 @@ botao.forEach((button) => {
     criandojogo();
   });
 });
-reset.addEventListener("click",criandojogo);
+reset.addEventListener("click", function() {
+  aviso.innerText = "BOM JOGO"
+  criandojogo()
+});
 
 regras.addEventListener("click",mostrarregras)
 
