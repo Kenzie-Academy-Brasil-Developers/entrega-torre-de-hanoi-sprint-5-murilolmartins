@@ -10,10 +10,24 @@
 </head>
 <body>
     <div class="container">
-        <button class="dificuldade" value="3">3 discos</button>
-        <button class="dificuldade" value="4">4 discos</button>
-        <button class="dificuldade" value="5">5 discos</button>
+        <header>
+            <div class="botoes">
+                <button class="dificuldade" value="3">3 discos</button>
+                <button class="dificuldade" value="4">4 discos</button>
+                <button class="dificuldade" value="5">5 discos</button>
+            </div>
+            <button class="botao_regras">REGRAS</button>
+        </header>
         <div class="tabuleiro">
+            <div class="regras">
+                <button class="fechar">X</button>
+                <ul>
+                    <li>Movimentar uma só peça (disco) de cada vez.</li>
+                    <li>Uma peça maior não pode ficar acima de uma menor.</li>
+                    <li>Não é permitido movimentar uma peça que esteja abaixo de outra.</li>
+                    <li>Ganha quando todos os discos estiverem a posição C.</li>
+                </ul>
+            </div>
             <div class="espetos">
                 <div class="espeto"></div>
                 <div class="discos start"></div>
@@ -34,7 +48,7 @@
         </div>
         <div class="footer">
 
-            <p class="aviso">Teste</p>
+            <p class="aviso">BOM JOGO</p>
             <button class="reset">RESET</button>
             <p class="footer__p">Contador Jogadas<span class="contador"></span></p>
 

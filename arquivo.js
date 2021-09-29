@@ -4,6 +4,8 @@ const reset = document.querySelector(".reset");
 let contagem = document.querySelector(".contador");
 let botao = document.querySelectorAll(".dificuldade");
 let aviso = document.querySelector(".aviso");
+const regras = document.querySelector(".botao_regras")
+const xregras = document.querySelector(".fechar")
 let variavel = 0;
 let contador = 0;
 let discoescolhido;
@@ -20,6 +22,10 @@ botao.forEach((button) => {
   });
 });
 reset.addEventListener("click",criandojogo);
+
+regras.addEventListener("click",mostrarregras)
+
+xregras.addEventListener("click",fecharregras)
 
 function selecionando(event) {
   if (variavel === 0 && event.currentTarget.lastElementChild.childElementCount >= 1) {
@@ -42,7 +48,7 @@ function selecionando(event) {
       variavel = 0;
       aviso.innerText = "Jogada Invalida";
       setTimeout(() => {
-        aviso.innerText = "";
+        aviso.innerText = "Continue Tentando";
       }, 2893);
     }
   }
@@ -70,10 +76,19 @@ function vitoria() {
   if (espetoFinal.childElementCount == dificuldade) {
     aviso.innerText = "Você GANHOU!";
     setTimeout(() => {
-      aviso.innerText = "";
+      aviso.innerText = "BOM JOGO";
       criandojogo();
     }, 5196);
   }
 }
 criandojogo();
+
+function mostrarregras() {
+  let divregras = document.querySelector(".regras")
+  divregras.style.display = "initial"  
+}
+function fecharregras() {
+  let divregras = document.querySelector(".regras")
+  divregras.style.display = "none"  
+}
 
