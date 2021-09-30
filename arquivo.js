@@ -1,15 +1,19 @@
-
-const espetos = document.querySelectorAll(".espetos");
-const reset = document.querySelector(".reset");
-let contagem = document.querySelector(".contador");
-let botao = document.querySelectorAll(".dificuldade");
-let aviso = document.querySelector(".aviso");
-const regras = document.querySelector(".botao_regras")
-const xregras = document.querySelector(".fechar")
 let variavel = 0;
 let contador = 0;
 let discoescolhido;
 let dificuldade = 3;
+let contagem = document.querySelector(".contador");
+
+criandotabuleiro()
+criandojogo();
+
+const espetos = document.querySelectorAll(".espetos");
+const reset = document.querySelector(".reset");
+let botao = document.querySelectorAll(".dificuldade");
+let aviso = document.querySelector(".aviso");
+const regras = document.querySelector(".botao_regras")
+const xregras = document.querySelector(".fechar")
+
 
 espetos.forEach((espeto) => {
   espeto.addEventListener("click", selecionando);
@@ -63,7 +67,8 @@ function criandojogo() {
   discos.forEach((discos) => {
     discos.innerHTML = "";
   });
-  let start = document.querySelector(".start");
+  let start = document.querySelector(".discos");
+  start.classList.add("start")
   for (let i = 0; i < dificuldade; i++) {
     let disco = document.createElement("div");
     disco.classList.add(`disco${i}`);
@@ -75,7 +80,8 @@ function criandojogo() {
 }
 
 function vitoria() {
-  let espetoFinal = document.querySelector(".end");
+  let espetoFinal = document.querySelectorAll(".discos")[2];
+  espetoFinal.classList.add("end")
   if (espetoFinal.childElementCount == dificuldade) {
     aviso.innerText = "Você GANHOU!";
     setTimeout(() => {
@@ -84,7 +90,6 @@ function vitoria() {
     }, 5196);
   }
 }
-criandojogo();
 
 function mostrarregras() {
   let divregras = document.querySelector(".regras")
@@ -95,3 +100,18 @@ function fecharregras() {
   divregras.style.display = "none"  
 }
 
+function criandotabuleiro() {
+  for(let i = 0; i < 3; i++) {
+     let divtabuleiro = document.querySelector(".tabuleiro")
+     let divespetos = document.createElement("div") 
+     divespetos.classList.add("espetos")
+     let divespeto = document.createElement("div") 
+     divespeto.classList.add("espeto")
+     let divdiscos = document.createElement("div") 
+     divdiscos.classList.add("discos")
+     divespetos.appendChild(divespeto)
+     divespetos.appendChild(divdiscos)
+     divtabuleiro.appendChild(divespetos)
+
+  }
+}
